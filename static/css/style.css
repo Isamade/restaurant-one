@@ -192,6 +192,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     overflow: hidden;
+    padding-top: 100px; /* Add padding to account for fixed navbar */
 }
 
 .hero-overlay {
@@ -677,7 +678,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 767.98px) {
     .hero-section {
-        padding: 0 1rem;
+        padding: 100px 1rem 0 1rem; /* Maintain top padding for navbar and add side padding */
     }
     
     .hero-title {
