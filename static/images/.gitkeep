@@ -1,0 +1,2 @@
+# This file ensures the images directory is tracked by git
+# Images will be served from external URLs as specified in the HTML

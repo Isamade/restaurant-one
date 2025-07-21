@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McHez - Authentic Nigerian Cuisine</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-utensils"></i>
+                McHez
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            Welcome to <span class="text-primary">McHez</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Authentic Nigerian cuisine that brings the rich flavors of Africa to your table
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#menu" class="btn btn-primary btn-lg me-3">
+                                <i class="fas fa-utensils me-2"></i>
+                                View Menu
+                            </a>
+                            <a href="#contact" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-phone me-2"></i>
+                                Order Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="https://pixabay.com/get/gd33a70028fcd93175a3ae5d51de374344f48949b60470b14cec12538797ccad2e26182ec189f12322b84fdbd32c46b5410f4e9d0d19fd49495ea4795b845c930_1280.jpg" alt="Nigerian Rice Dish" class="img-fluid rounded-3 shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about" class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img src="https://pixabay.com/get/gadbc74347bcad3be96b93e9b46982bf8edb12554b43e7f4ad1f2144bcbc82b7f36e0b97506e874f0ff7995b07feb669441078cf67369ae650ea32bf1f944b2ac_1280.jpg" alt="Restaurant Interior" class="img-fluid rounded-3 shadow">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h2 class="section-title">Our Story</h2>
+                        <p class="lead">
+                            At McHez, we celebrate the vibrant culinary heritage of Nigeria, bringing authentic flavors and traditional recipes to life in every dish we serve.
+                        </p>
+                        <p>
+                            Our passion for Nigerian cuisine drives us to source the finest ingredients and prepare each meal with love and authenticity. From aromatic rice dishes to traditional local delicacies and beloved snacks like meat pie, we offer a true taste of Nigeria.
+                        </p>
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <i class="fas fa-seedling text-primary"></i>
+                                <span>Fresh Ingredients</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-heart text-primary"></i>
+                                <span>Made with Love</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-certificate text-primary"></i>
+                                <span>Authentic Recipes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our Menu</h2>
+                <p class="section-subtitle">Discover the authentic flavors of Nigeria</p>
+            </div>
+
+            <!-- Menu Categories -->
+            <div class="menu-categories mb-4">
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-primary active" data-category="all">All</button>
+                            <button type="button" class="btn btn-outline-primary" data-category="rice">Rice Dishes</button>
+                            <button type="button" class="btn btn-outline-primary" data-category="local">Local Meals</button>
+                            <button type="button" class="btn btn-outline-primary" data-category="snacks">Snacks</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rice Dishes -->
+            <div class="menu-category" data-category="rice">
+                <h3 class="category-title">Rice Dishes</h3>
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://pixabay.com/get/gd33a70028fcd93175a3ae5d51de374344f48949b60470b14cec12538797ccad2e26182ec189f12322b84fdbd32c46b5410f4e9d0d19fd49495ea4795b845c930_1280.jpg" alt="Jollof Rice" class="img-fluid">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Jollof Rice</h4>
+                                    <span class="price">₦2,500</span>
+                                </div>
+                                <p>Nigeria's most beloved rice dish, cooked in a rich tomato sauce with aromatic spices and served with your choice of protein.</p>
+                                <div class="menu-item-tags">
+                                    <span class="tag">Spicy</span>
+                                    <span class="tag">Popular</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://pixabay.com/get/gcf4ab4bdacd8ad86d7ea8ddfb2945db9b4a7ff0ce33be6f01273f5fc60a656dde4557a647a8da36678416248d79fc1fbbe364e127e87d3151b3c97f2b6e62909_1280.jpg" alt="Fried Rice" class="img-fluid">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Nigerian Fried Rice</h4>
+                                    <span class="price">₦2,800</span>
+                                </div>
+                                <p>Colorful fried rice with mixed vegetables, liver, and chicken, seasoned with Nigerian spices for that authentic taste.</p>
+                                <div class="menu-item-tags">
+                                    <span class="tag">Colorful</span>
+                                    <span class="tag">Nutritious</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://pixabay.com/get/g5bf95921f7e35e6029f654b3243466e12819a3b192b240b554b5121eaf2076f74ce36157c494b4a904085e60733e7d6a439427e20bc8fe7308504d4513144b79_1280.jpg" alt="Coconut Rice" class="img-fluid">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Coconut Rice</h4>
+                                    <span class="price">₦2,200</span>
+                                </div>
+                                <p>Fragrant rice cooked in coconut milk with subtle spices, creating a creamy and flavorful dish that's simply irresistible.</p>
+                                <div class="menu-item-tags">
+                                    <span class="tag">Creamy</span>
+                                    <span class="tag">Mild</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://pixabay.com/get/gf1ed51ee969dda4c6c8db63d88146225d18ed2d5c406f337226678efb4476e60265f5266ff224c15ab1461e4c4fb9ea5b159dcdf8ce65a4211f00f321badec00_1280.jpg" alt="Ofada Rice" class="img-fluid">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Ofada Rice & Stew</h4>
+                                    <span class="price">₦3,200</span>
+                                </div>
+                                <p>Local brown rice served with the famous Ofada stew made with palm oil, locust beans, and assorted meat.</p>
+                                <div class="menu-item-tags">
+                                    <span class="tag">Traditional</span>
+                                    <span class="tag">Rich</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Local Meals -->
+            <div class="menu-category" data-category="local">
+                <h3 class="category-title">Local Nigerian Meals</h3>
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://pixabay.com/get/g3ea73a35f25c2252153cf98819e8904ec6be0cf7a78b2d900236ef7d672260359e77bcfc41522bb01063ad136aaaacf4326c1081fe7970f4a4e04d67ec96223f_1280.jpg" alt="Pounded Yam" class="img-fluid">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Pounded Yam & Egusi</h4>
+                                    <span class="price">₦3,500</span>
+                                </div>
+                                <p>Smooth pounded yam served with rich egusi soup made with melon seeds, vegetables, and assorted meat.</p>
+                                <div class="menu-item-tags">
+                                    <span class="tag">Traditional</span>
+                                    <span class="tag">Filling</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://pixabay.com/get/g2b06b35e8ad18c848f2dda9ad3f385481eedbb6e9124f7c962e562c6c706facf58ec4334f0ecf6733129bbd2cd6a70a10a1d1418c21b8475d55320a3e30b4434_1280.jpg" alt="Amala" class="img-fluid">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Amala & Ewedu</h4>
+                                    <span class="price">₦2,800</span>
+                                </div>
+                                <p>Yoruba delicacy of yam flour swallow served with ewedu soup and your choice of stew with assorted meat.</p>
+                                <div class="menu-item-tags">
+                                    <span class="tag">Yoruba</span>
+                                    <span class="tag">Healthy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://pixabay.com/get/g95e75a5cadd7efeabbf28e8e1868753a259ca91d9c577971a8396d40ef346ca190577364117d1a12f44f1c6562fb98589d1e9044652cc97d1244a5fbfc775890_1280.jpg" alt="Pepper Soup" class="img-fluid">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Pepper Soup</h4>
+                                    <span class="price">₦2,000</span>
+                                </div>
+                                <p>Spicy and aromatic soup with fish or meat, seasoned with local spices and herbs. Perfect for any weather.</p>
+                                <div class="menu-item-tags">
+                                    <span class="tag">Spicy</span>
+                                    <span class="tag">Aromatic</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://pixabay.com/get/gf7530501ebaf3de4545d41c1853936976b7784514d9cf8316d52e15d5808cdb3e5a56d6ea38a02d7d8abdd4acb5691e9c2218f767943f9d028e5ef3694163413_1280.jpg" alt="Suya" class="img-fluid">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Suya Platter</h4>
+                                    <span class="price">₦1,800</span>
+                                </div>
+                                <p>Grilled meat seasoned with yaji (suya spice), served with onions, tomatoes, and fresh bread.</p>
+                                <div class="menu-item-tags">
+                                    <span class="tag">Grilled</span>
+                                    <span class="tag">Spicy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Snacks -->
+            <div class="menu-category" data-category="snacks">
+                <h3 class="category-title">Snacks & Light Bites</h3>
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://pixabay.com/get/g0b207d7b932e2d537a2076d86babc845f01e2f4c3ce794df2f2cb7bea727733efc27a5784e938a3764af8dfd77c124bc4222c420a43c67a692095d34ce8c686e_1280.jpg" alt="Meat Pie" class="img-fluid">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Meat Pie</h4>
+                                    <span class="price">₦500</span>
+                                </div>
+                                <p>Golden pastry filled with seasoned minced meat, potatoes, and carrots. A Nigerian favorite snack.</p>
+                                <div class="menu-item-tags">
+                                    <span class="tag">Popular</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://pixabay.com/get/g648e7f0f6f43bbe9956d24933029a778e5560e25f7c69872b21e33eae2de5225b8ae2ad1e992532d0f9ea6230c978d0a1285c7771506636ec1eb8b214392c2cf_1280.jpg" alt="Sausage Roll" class="img-fluid">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Sausage Roll</h4>
+                                    <span class="price">₦400</span>
+                                </div>
+                                <p>Flaky pastry wrapped around seasoned sausage meat, baked to golden perfection.</p>
+                                <div class="menu-item-tags">
+                                    <span class="tag">Crispy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="menu-item">
+                            <div class="menu-item-image">
+                                <img src="https://pixabay.com/get/g2dfd033184d7ccc7d5c07f563b78c48392383048ebf9f56f86557d1273d485d62aa85f43cd78a78258f7c0f79e4ec66d12fa675563d9becedd4c23cea3981fcd_1280.jpg" alt="Fish Roll" class="img-fluid">
+                            </div>
+                            <div class="menu-item-content">
+                                <div class="menu-item-header">
+                                    <h4>Fish Roll</h4>
+                                    <span class="price">₦450</span>
+                                </div>
+                                <p>Delicious pastry filled with seasoned fish, perfect for a quick and tasty snack.</p>
+                                <div class="menu-item-tags">
+                                    <span class="tag">Light</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Gallery</h2>
+                <p class="section-subtitle">A visual feast of our delicious offerings</p>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://pixabay.com/get/gd33a70028fcd93175a3ae5d51de374344f48949b60470b14cec12538797ccad2e26182ec189f12322b84fdbd32c46b5410f4e9d0d19fd49495ea4795b845c930_1280.jpg" alt="Gallery Image" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://pixabay.com/get/gcf4ab4bdacd8ad86d7ea8ddfb2945db9b4a7ff0ce33be6f01273f5fc60a656dde4557a647a8da36678416248d79fc1fbbe364e127e87d3151b3c97f2b6e62909_1280.jpg" alt="Gallery Image" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://pixabay.com/get/g5bf95921f7e35e6029f654b3243466e12819a3b192b240b554b5121eaf2076f74ce36157c494b4a904085e60733e7d6a439427e20bc8fe7308504d4513144b79_1280.jpg" alt="Gallery Image" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://pixabay.com/get/g3ea73a35f25c2252153cf98819e8904ec6be0cf7a78b2d900236ef7d672260359e77bcfc41522bb01063ad136aaaacf4326c1081fe7970f4a4e04d67ec96223f_1280.jpg" alt="Gallery Image" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://pixabay.com/get/g0b207d7b932e2d537a2076d86babc845f01e2f4c3ce794df2f2cb7bea727733efc27a5784e938a3764af8dfd77c124bc4222c420a43c67a692095d34ce8c686e_1280.jpg" alt="Gallery Image" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item">
+                        <img src="https://pixabay.com/get/gadbc74347bcad3be96b93e9b46982bf8edb12554b43e7f4ad1f2144bcbc82b7f36e0b97506e874f0ff7995b07feb669441078cf67369ae650ea32bf1f944b2ac_1280.jpg" alt="Gallery Image" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <h2 class="section-title">Get In Touch</h2>
+                        <p class="section-subtitle">Ready to experience authentic Nigerian flavors? Contact us today!</p>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Location</h5>
+                                <p>123 Lagos Street, Victoria Island<br>Lagos, Nigeria</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Phone</h5>
+                                <p>+234 123 456 7890<br>+234 987 654 3210</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Email</h5>
+                                <p>info@mchez.com<br>orders@mchez.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h5>Opening Hours</h5>
+                                <p>Mon - Sat: 9:00 AM - 10:00 PM<br>Sunday: 11:00 AM - 8:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Your Name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Your Email" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control" placeholder="Your Phone">
+                            </div>
+                            <div class="form-group">
+                                <select class="form-control">
+                                    <option>Reservation Inquiry</option>
+                                    <option>Catering Services</option>
+                                    <option>General Inquiry</option>
+                                    <option>Feedback</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fas fa-paper-plane me-2"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="footer-brand">
+                        <a href="#home" class="footer-logo">
+                            <i class="fas fa-utensils"></i>
+                            McHez
+                        </a>
+                        <p class="footer-text">Authentic Nigerian cuisine that brings the rich flavors of Africa to your table.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="footer-social">
+                        <h6>Follow Us</h6>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="copyright">© 2025 McHez Restaurant. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
