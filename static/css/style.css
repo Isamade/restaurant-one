@@ -196,7 +196,10 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero Section */
 .hero-section {
     min-height: 100vh;
-    background: linear-gradient(135deg, var(--dark-color) 0%, var(--gray-800) 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1610851467843-fe4a65aea9c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     position: relative;
     display: flex;
     align-items: center;
@@ -221,10 +224,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-title {
-    font-size: 4.5rem;
-    font-weight: 900;
+    font-family: 'Pacifico', cursive;
+    font-size: 5rem;
+    font-weight: 400;
     margin-bottom: 1.5rem;
     animation: fadeInUp 1s ease;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
 }
 
 .hero-title .text-primary {
@@ -232,10 +238,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
     margin-bottom: 2.5rem;
-    opacity: 0.9;
+    opacity: 0.95;
     animation: fadeInUp 1s ease 0.2s both;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.6;
 }
 
 .hero-buttons {
@@ -655,7 +665,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Responsive Design */
 @media (max-width: 1199.98px) {
     .hero-title {
-        font-size: 3.5rem;
+        font-size: 4rem;
     }
     
     .section-title {
@@ -665,12 +675,13 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 991.98px) {
     .hero-title {
-        font-size: 3rem;
+        font-size: 3.5rem;
         text-align: center;
     }
     
     .hero-subtitle {
         text-align: center;
+        font-size: 1.2rem;
     }
     
     .hero-buttons {
@@ -695,10 +706,15 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 767.98px) {
     .hero-section {
         padding: 100px 1rem 0 1rem; /* Maintain top padding for navbar and add side padding */
+        background-attachment: scroll; /* Fix background on mobile */
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
     }
     
     .section-title {
@@ -737,7 +753,12 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 575.98px) {
     .hero-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
     }
     
     .navbar-brand {
