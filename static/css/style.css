@@ -139,6 +139,15 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 900;
     color: var(--primary-color) !important;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    height: 50px;
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
 }
 
 .navbar-brand i {
@@ -551,6 +560,13 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
 }
 
+.footer-logo-img {
+    height: 40px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+}
+
 .footer-logo i {
     margin-right: 0.5rem;
     color: var(--accent-color);
@@ -726,6 +742,16 @@ h1, h2, h3, h4, h5, h6 {
     
     .navbar-brand {
         font-size: 1.5rem;
+    }
+    
+    .navbar-logo {
+        height: 35px;
+        max-width: 100px;
+    }
+    
+    .footer-logo-img {
+        height: 30px;
+        max-width: 90px;
     }
     
     .section-title {
